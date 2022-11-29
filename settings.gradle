@@ -1,0 +1,4 @@
+rootProject.name = 'member-invitation-java-springboot'
+include(
+        "member-invitation-interface"
+)
