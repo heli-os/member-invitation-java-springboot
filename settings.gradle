@@ -5,4 +5,5 @@ include 'member-invitation-domain'
 include 'member-invitation-interface'
 include 'member-invitation-infrastructure'
 include 'member-invitation-infrastructure:persistence-database'
+include 'member-invitation-infrastructure:persistence-redis-adapter'
 

@@ -4,3 +4,4 @@ spring:
   profiles:
     include:
       - persistence-database
+      - persistence-redis-adapter
