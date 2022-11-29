@@ -1,0 +1,3 @@
+dependencies {
+    implementation project(':member-invitation-infrastructure:persistence-database')
+}
