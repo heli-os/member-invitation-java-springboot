@@ -1,4 +1,8 @@
 rootProject.name = 'member-invitation-java-springboot'
-include(
-        "member-invitation-interface"
-)
+include 'commons'
+include 'commons:common-model'
+include 'member-invitation-domain'
+include 'member-invitation-interface'
+include 'member-invitation-infrastructure'
+include 'member-invitation-infrastructure:persistence-database'
+
