@@ -74,7 +74,7 @@
 {
   "workspaceId": 0,
   "memberId": 0,
-  "expiresAt": 0, // expires at Unix Time(epochMillis)
+  "expiresAt": 0, // Unix Time(epochMillis)
   "code": "String"
 }
 ```
@@ -84,8 +84,8 @@
 ```
 {
   "id": 0,
-  "createdAt": 0, // expires at Unix Time(epochMillis)
-  "lastModifiedAt": 0, // expires at Unix Time(epochMillis)
+  "createdAt": 0, // Unix Time(epochMillis)
+  "lastModifiedAt": 0, // Unix Time(epochMillis)
   "name": "String",
   "phoneNumber": "String",
   "email": "String",
