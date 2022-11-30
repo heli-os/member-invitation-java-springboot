@@ -1,5 +1,6 @@
 package kr.dataportal.invitation.persistence.service.member;
 
+import kr.dataportal.invitation.model.member.InviteMember;
 import kr.dataportal.invitation.model.member.MemberStatus;
 import kr.dataportal.invitation.persistence.entity.member.MemberJpaEntity;
 import kr.dataportal.invitation.persistence.repository.member.MemberRepository;
@@ -25,6 +26,7 @@ class MemberCommandTest {
     private final String name = "Heli";
     private final String phoneNumber = "010-1111-2222";
     private final String email = "heli@example.com";
+    private final InviteMember inviteMember = new InviteMember(name, phoneNumber, email);
     private final MemberJpaEntity candidateMemberJpaEntity = MemberJpaEntity.newCandidate(name, phoneNumber, email);
     private MemberCommand sut;
     @Mock
@@ -40,7 +42,7 @@ class MemberCommandTest {
     void 후보_Member_엔티티를_생성할_수_있다() {
         when(memberRepository.save(any())).then(returnsFirstArg());
 
-        MemberJpaEntity actual = sut.newCandidate(name, phoneNumber, email);
+        MemberJpaEntity actual = sut.newCandidate(inviteMember);
 
         assertThat(actual.getName()).isEqualTo(name);
         assertThat(actual.getPhoneNumber()).isEqualTo(phoneNumber);

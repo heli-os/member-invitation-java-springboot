@@ -1,5 +1,7 @@
 package kr.dataportal.invitation.persistence.config;
 
+import com.google.common.annotations.VisibleForTesting;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -8,7 +10,7 @@ import java.time.LocalDateTime;
  * Created on 2022. 11. 30
  */
 @MappedSuperclass
-public abstract class BaseEntity {
+public abstract class BaseEntity<T extends BaseEntity<T>> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,5 +43,14 @@ public abstract class BaseEntity {
 
     public LocalDateTime getLastModifiedAt() {
         return lastModifiedAt;
+    }
+
+    @SuppressWarnings("unchecked")
+    @VisibleForTesting
+    public T apply(final long id, final LocalDateTime now) {
+        this.id = id;
+        this.createdAt = now;
+        this.lastModifiedAt = now;
+        return (T) this;
     }
 }
