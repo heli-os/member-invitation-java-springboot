@@ -1,6 +1,9 @@
 dependencies {
     implementation project(':member-invitation-domain')
+    implementation project(':commons:common-model')
+    implementation project(':commons:common-util')
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
 }
