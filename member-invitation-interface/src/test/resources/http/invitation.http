@@ -1,0 +1,30 @@
+### workspace에 대한 초대장 발급 - 성공
+POST http://localhost:8080/api/v1/workspace/1/invitation
+Content-Type: application/json
+
+{
+  "inviteMemberName": "Heli",
+  "inviteMemberPhoneNumber": "010-1111-2222",
+  "inviteMemberEmail": "heli@example.com"
+}
+
+### workspace에 대한 초대장 발급 - 실패 (BAD_REQUEST)
+POST http://localhost:8080/api/v1/workspace/1/invitation
+Content-Type: application/json
+
+{
+  "inviteMemberName": "",
+  "inviteMemberPhoneNumber": "010-1111-2222",
+  "inviteMemberEmail": "heli@example.com"
+}
+
+### 발급된 초대장 조회
+GET http://localhost:8080/api/v1/invitation/F7v93E42wpfR60wmlTVFGbBYDzI6RgMc
+
+### 기존에 가입된 Member 조회
+GET http://localhost:8080/api/v1/member/1
+
+### 초대 승낙
+POST http://localhost:8080/api/v1/invitation/F7v93E42wpfR60wmlTVFGbBYDzI6RgMc/accept
+Content-Type: application/json
+
