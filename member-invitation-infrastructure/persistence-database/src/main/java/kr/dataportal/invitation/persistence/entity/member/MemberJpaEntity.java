@@ -14,7 +14,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "member")
-public class MemberJpaEntity extends BaseEntity {
+public class MemberJpaEntity extends BaseEntity<MemberJpaEntity> {
 
     private String name;
     private String phoneNumber;

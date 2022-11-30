@@ -6,4 +6,5 @@ include 'member-invitation-interface'
 include 'member-invitation-infrastructure'
 include 'member-invitation-infrastructure:persistence-database'
 include 'member-invitation-infrastructure:persistence-redis-adapter'
+include 'commons:common-util'
 

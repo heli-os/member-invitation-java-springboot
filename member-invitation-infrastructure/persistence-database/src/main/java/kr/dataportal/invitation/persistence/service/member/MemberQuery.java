@@ -19,7 +19,7 @@ public class MemberQuery {
         this.memberRepository = memberRepository;
     }
 
-    public MemberJpaEntity findById(final Long memberId) {
+    public MemberJpaEntity findById(final long memberId) {
         return memberRepository.findById(memberId)
                 .orElseThrow(() -> new NotFoundMemberException(memberId));
     }

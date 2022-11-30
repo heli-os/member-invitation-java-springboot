@@ -1,3 +1,10 @@
 dependencies {
+    implementation project(':commons:common-model')
     implementation project(':member-invitation-infrastructure:persistence-database')
+    implementation project(':member-invitation-infrastructure:persistence-redis-adapter')
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
 }

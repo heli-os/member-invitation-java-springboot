@@ -8,7 +8,7 @@ public class NotFoundMemberException extends RuntimeException {
 
     private static final String MESSAGE_FORMAT = "can not found member [memberId=%s]";
 
-    public NotFoundMemberException(final Long memberId) {
+    public NotFoundMemberException(final long memberId) {
         super(String.format(MESSAGE_FORMAT, memberId));
     }
 }
