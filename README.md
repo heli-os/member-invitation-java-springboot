@@ -149,4 +149,5 @@ DataModel#MemberResponseDto
 
 - 주요 도메인 컴포넌트에 대한 테스트 코드만 작성하고, E2E 테스트는 별도로 작성하지 않았습니다.
 - 에러와 예외를 어떻게 처리할 것인지에 대한 전체적인 시스템을 정의하여야 합니다.
+- 추후 logback rollingPolicy 적용이 필요합니다.
 - last updated at: 2022-11-30
